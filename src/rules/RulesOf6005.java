@@ -35,11 +35,16 @@ public class RulesOf6005 {
     public static boolean mayUseCodeInAssignment(boolean writtenByYourself,
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
-        
-        // TODO: Fill in this method, then remove the exception
-        
-        throw new RuntimeException("implement me!");
-    }
+    	  
+    	
+    	    if (writtenByYourself) {
+    	        return true;
+    	    }
+    	    if (writtenAsCourseWork) {
+    	        return false;
+    	    }
+    	    return availableToOthers && citingYourSource && !implementationRequired;
+    	}
     
     /**
      * Main method of the class.
